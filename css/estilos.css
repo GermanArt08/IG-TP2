@@ -1,0 +1,146 @@
+/* Variables de color y tipografía */
+:root {
+  --bordo-principal: #5c0f1c;
+  --bordo-oscuro: #3b0912;
+  --dorado-acento: #8c6b28; /* Dorado con mayor contraste para lectura */
+  --dorado-brillante: #e5c17c;
+  --crema-fondo: #f9f6f0;
+  --crema-tarjeta: #f2ebd9;
+  --texto-oscuro: #2b231d;
+  --fuente-titulo: 'Cinzel', serif;
+  --fuente-texto: 'Cormorant Garamond', serif;
+}
+
+/* Fondo general de la página */
+body, body.renacimiento-bg {
+  background-color: var(--crema-fondo);
+  color: var(--texto-oscuro);
+  font-family: var(--fuente-texto);
+  font-size: 1.15rem;
+}
+
+/* Encabezados y títulos */
+h1, h2, h3, h4, .navbar-brand {
+  font-family: var(--fuente-titulo);
+  letter-spacing: 1px;
+}
+
+.titulo-renacimiento {
+  color: var(--bordo-principal);
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+.subtitulo-renacimiento {
+  color: var(--texto-oscuro);
+  font-style: italic;
+}
+
+.divisor-dorado {
+  height: 3px;
+  width: 100px;
+  background-color: var(--dorado-acento);
+  margin-top: 15px;
+}
+
+/* Navegación y Footer */
+.bg-bordo {
+  background-color: var(--bordo-principal) !important;
+}
+
+.border-bottom-dorado {
+  border-bottom: 3px solid var(--dorado-acento) !important;
+}
+
+.border-top-dorado {
+  border-top: 3px solid var(--dorado-acento) !important;
+}
+
+.marca-renacimiento {
+  color: var(--dorado-acento) !important;
+  font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--crema-fondo);
+  font-family: var(--fuente-titulo);
+  font-size: 0.95rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--dorado-acento) !important;
+}
+
+/* Botones con estilo renacentista */
+.btn-renacimiento {
+  background-color: transparent;
+  color: var(--bordo-principal);
+  border: 2px solid var(--dorado-acento);
+  font-family: var(--fuente-titulo);
+  padding: 8px 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-renacimiento:hover,
+.btn-renacimiento.active {
+  background-color: var(--bordo-principal);
+  color: var(--dorado-acento);
+  border-color: var(--bordo-principal);
+}
+
+/* Tarjetas de Galería e Interacciones */
+.tarjeta-renacimiento {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--dorado-acento);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%; /* Mantiene las 6 tarjetas del mismo tamaño */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(92, 15, 28, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto 1: Levanta la tarjeta al pasar el cursor */
+.tarjeta-renacimiento:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(92, 15, 28, 0.18);
+}
+
+.img-contenedor {
+  border-bottom: 2px solid var(--dorado-acento);
+  overflow: hidden;
+  height: 240px; /* Tamaño parejo */
+}
+
+.img-contenedor img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Efecto 2: Hace zoom en la imagen dentro del contenedor al pasar el cursor */
+.tarjeta-renacimiento:hover .img-contenedor img {
+  transform: scale(1.05);
+}
+
+.tarjeta-cuerpo {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.tarjeta-cuerpo h3 {
+  color: var(--bordo-principal);
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.obra-tecnica {
+  color: var(--dorado-acento);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
