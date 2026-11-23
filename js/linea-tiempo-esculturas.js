@@ -1,9 +1,19 @@
   const contenedor = document.getElementById("lineaTiempoEsculturas");
 
-    const lineaTiempo = new Histropedia.Timeline(contenedor, {
-      width: contenedor.clientWidth,
-      height: contenedor.clientHeight
-    });
+  const lineaTiempo = new Histropedia.Timeline(contenedor, {
+    width: contenedor.clientWidth,
+    height: contenedor.clientHeight,
+    article: {
+      density: "all",
+      autoStacking: {
+        active: true,
+        rowSpacing: 70,
+        range: "all",
+        fitToHeight: false,
+        topGap: 20
+      }
+    }
+  });
 
     const esculturas = [
       {
@@ -138,7 +148,21 @@
 
     lineaTiempo.load(esculturas);
 
-    lineaTiempo.fitDateRange(
+    lineaTiempo.on("article-click", (articulo) => { //Al hacer click se abren con Fancybox
+      const obra = articulo.data;
+
+      if (obra.imageUrl) {
+        Fancybox.show([
+          {
+            src: obra.imageUrl,
+            type: "image",
+            caption: obra.title + " — " + obra.subtitle
+          }
+        ]);
+      }
+    });
+
+    lineaTiempo.fitDateRange( //Rango de años que aparecen al abrir la página
       { year: 1475 },
       { year: 1564 },
       { padding: 40 }

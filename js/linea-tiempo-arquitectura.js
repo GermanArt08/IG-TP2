@@ -2,7 +2,17 @@ const contenedor = document.getElementById("lineaTiempoArquitectura");
 
 const lineaTiempo = new Histropedia.Timeline(contenedor, {
   width: contenedor.clientWidth,
-  height: contenedor.clientHeight
+  height: contenedor.clientHeight,
+  article: {
+    density: "all",
+    autoStacking: {
+      active: true,
+      rowSpacing: 70,
+      range: "all",
+      fitToHeight: false,
+      topGap: 20
+    }
+  }
 });
 
 const proyectos = [
@@ -89,6 +99,20 @@ const proyectos = [
 ];
 
 lineaTiempo.load(proyectos);
+
+lineaTiempo.on("article-click", (articulo) => {
+  const obra = articulo.data;
+
+  if (obra.imageUrl) {
+    Fancybox.show([
+      {
+        src: obra.imageUrl,
+        type: "image",
+        caption: obra.title + " — " + obra.subtitle
+      }
+    ]);
+  }
+});
 
 lineaTiempo.fitDateRange(
   { year: 1516 },

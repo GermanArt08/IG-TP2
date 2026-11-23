@@ -153,18 +153,13 @@ h1, h2, h3, h4, .navbar-brand {
   border-radius: 0.5rem;
 }
 
-#lineaTiempoEsculturas {
-  width: 100%;
-  height: 34rem;
-}
-
 .fuente-linea-tiempo {
   margin-top: 1rem;
   font-size: 0.9rem;
 }
 .lineaTiempo {
   width: 100%;
-  height: 34rem;
+  height: 42rem;
   background-image:
     linear-gradient(
       rgba(255, 248, 230, 0.84),
