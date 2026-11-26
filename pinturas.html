@@ -64,8 +64,31 @@
   </header>
 
   <main class="container mb-5">
+    <div class="selector-vista">
+      <button type="button" id="botonLineaTiempo" class="btn-renacimiento">Línea del tiempo</button>
+      <button type="button" id="botonGaleria" class="btn-renacimiento">Galería</button>
+    </div>
+
+    <!--Linea del tiempo-->
+    <div id="vistaLineaTiempo">
+      <div id="vistaLineaTiempo">
+  
+          <div class="contenedor-linea-tiempo">
+            <h2 class="titulo-renacimiento">Línea del tiempo de las pinturas</h2>
+            <p>
+              Explorá algunos de las principales pinturas de Miguel Ángel.
+              Podés desplazarte por la línea, hacerle zoom para poder visualizar las obras mejor y también ampliarlas.
+            </p>
+
+            <div id="lineaTiempoPinturas" class="lineaTiempo"></div>
+          </div>
+        </div>
+    </div>
+
+    <div id="vistaGaleria" hidden>
     
-    <!-- Funcionalidad Adicional JS: Botones de Filtro por Categoría -->
+    <!--Galería-->
+    <!-- Botones de Filtro por Categoría -->
     <div class="row mb-4">
       <div class="col text-center">
         <div class="btn-group flex-wrap gap-2" role="group" aria-label="Filtro de obras">
@@ -75,112 +98,111 @@
         </div>
       </div>
     </div>
+        <div class="row g-4" id="galeriaObras">
 
-    <!-- Galería con Fancybox 5 (Mínimo 6 Obras) -->
-    <div class="row g-4" id="galeriaObras">
-
-      <!-- Obra 1 -->
-      <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
-        <div class="tarjeta-renacimiento">
-          <a href="img/Creacion_de_adan.jpeg" data-fancybox="galeria" data-caption="La Creación de Adán (1511) - Fresco, Bóveda de la Capilla Sixtina">
-            <div class="img-contenedor">
-              <img src="img/Creacion_de_adan.jpeg" alt="La Creación de Adán" class="img-fluid" loading="lazy" decoding="async">
+          <!-- Obra 1 -->
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
+            <div class="tarjeta-renacimiento">
+              <a href="img/pinturas/creacion_de_adan.jpeg" data-fancybox="galeria" data-caption="La Creación de Adán (1511) - Fresco, Bóveda de la Capilla Sixtina">
+                <div class="img-contenedor">
+                  <img src="img/pinturas/creacion_de_adan.jpeg" alt="La Creación de Adán" class="img-fluid" loading="lazy" decoding="async">
+                </div>
+              </a>
+              <div class="tarjeta-cuerpo">
+                <h3>La Creación de Adán</h3>
+                <p class="obra-tecnica">1511 • Fresco monumental</p>
+                <p>Representación del episodio del Génesis donde Dios da vida al primer hombre.</p>
+              </div>
             </div>
-          </a>
-          <div class="tarjeta-cuerpo">
-            <h3>La Creación de Adán</h3>
-            <p class="obra-tecnica">1511 • Fresco monumental</p>
-            <p>Representación del episodio del Génesis donde Dios da vida al primer hombre.</p>
           </div>
-        </div>
-      </div>
 
-      <!-- Obra 2 -->
-      <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="tabla">
-        <div class="tarjeta-renacimiento">
-          <a href="img/tondo_doni.jpeg" data-fancybox="galeria" data-caption="Tondo Doni (1507) - Temple y óleo sobre tabla, Galería Uffizi">
-            <div class="img-contenedor">
-              <img src="img/tondo_doni.jpeg" alt="Tondo Doni" class="img-fluid" loading="lazy"
-  decoding="async">
+          <!-- Obra 2 -->
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="tabla">
+            <div class="tarjeta-renacimiento">
+              <a href="img/pinturas/tondo_doni.jpeg" data-fancybox="galeria" data-caption="Tondo Doni (1507) - Temple y óleo sobre tabla, Galería Uffizi">
+                <div class="img-contenedor">
+                  <img src="img/pinturas/tondo_doni.jpeg" alt="Tondo Doni" class="img-fluid" loading="lazy"
+      decoding="async">
+                </div>
+              </a>
+              <div class="tarjeta-cuerpo">
+                <h3>Tondo Doni</h3>
+                <p class="obra-tecnica">1507 • Temple sobre tabla</p>
+                <p>La Sagrada Familia dispuesta en una composición circular única en su tipo.</p>
+              </div>
             </div>
-          </a>
-          <div class="tarjeta-cuerpo">
-            <h3>Tondo Doni</h3>
-            <p class="obra-tecnica">1507 • Temple sobre tabla</p>
-            <p>La Sagrada Familia dispuesta en una composición circular única en su tipo.</p>
           </div>
-        </div>
-      </div>
 
-      <!-- Obra 3 -->
-      <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
-        <div class="tarjeta-renacimiento">
-          <a href="img/juicio_final.jpeg" data-fancybox="galeria" data-caption="El Juicio Final (1541) - Fresco sobre la pared del altar, Capilla Sixtina">
-            <div class="img-contenedor">
-              <img src="img/juicio_final.jpeg" alt="El Juicio Final" class="img-fluid" loading="lazy"
-  decoding="async">
+          <!-- Obra 3 -->
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
+            <div class="tarjeta-renacimiento">
+              <a href="img/pinturas/juicio_final.jpg" data-fancybox="galeria" data-caption="El Juicio Final (1541) - Fresco sobre la pared del altar, Capilla Sixtina">
+                <div class="img-contenedor">
+                  <img src="img/pinturas/juicio_final.jpg" alt="El Juicio Final" class="img-fluid" loading="lazy"
+      decoding="async">
+                </div>
+              </a>
+              <div class="tarjeta-cuerpo">
+                <h3>El Juicio Final</h3>
+                <p class="obra-tecnica">1536–1541 • Fresco</p>
+                <p>Apocalíptica pared del altar que alberga a más de 400 figuras humanas.</p>
+              </div>
             </div>
-          </a>
-          <div class="tarjeta-cuerpo">
-            <h3>El Juicio Final</h3>
-            <p class="obra-tecnica">1536–1541 • Fresco</p>
-            <p>Apocalíptica pared del altar que alberga a más de 400 figuras humanas.</p>
           </div>
-        </div>
-      </div>
 
-      <!-- Obra 4 -->
-      <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
-        <div class="tarjeta-renacimiento">
-          <a href="img/pecado_original.jpeg" data-fancybox="galeria" data-caption="El Pecado Original y la Expulsión del Paraíso (1510) - Fresco, Capilla Sixtina">
-            <div class="img-contenedor">
-              <img src="img/pecado_original.jpeg" alt="El Pecado Original" class="img-fluid" loading="lazy"
-  decoding="async">
+          <!-- Obra 4 -->
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
+            <div class="tarjeta-renacimiento">
+              <a href="img/pinturas/pecado_original.jpeg" data-fancybox="galeria" data-caption="El Pecado Original y la Expulsión del Paraíso (1510) - Fresco, Capilla Sixtina">
+                <div class="img-contenedor">
+                  <img src="img/pinturas/pecado_original.jpeg" alt="El Pecado Original" class="img-fluid" loading="lazy"
+      decoding="async">
+                </div>
+              </a>
+              <div class="tarjeta-cuerpo">
+                <h3>El Pecado Original</h3>
+                <p class="obra-tecnica">1510 • Fresco monumental</p>
+                <p>Representación continua del engaño de la serpiente y el desierto de la expulsión.</p>
+              </div>
             </div>
-          </a>
-          <div class="tarjeta-cuerpo">
-            <h3>El Pecado Original</h3>
-            <p class="obra-tecnica">1510 • Fresco monumental</p>
-            <p>Representación continua del engaño de la serpiente y el desierto de la expulsión.</p>
           </div>
-        </div>
-      </div>
 
-      <!-- Obra 5 -->
-      <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
-        <div class="tarjeta-renacimiento">
-          <a href="img/conversion_sanpablo.jpg" data-fancybox="galeria" data-caption="La Conversión de San Pablo (1545) - Fresco, Capilla Paolina">
-            <div class="img-contenedor">
-              <img src="img/conversion_sanpablo.jpg" alt="La Conversión de San Pablo" class="img-fluid" loading="lazy"
-  decoding="async">
+          <!-- Obra 5 -->
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="fresco">
+            <div class="tarjeta-renacimiento">
+              <a href="img/pinturas/conversion_sanpablo.jpg" data-fancybox="galeria" data-caption="La Conversión de San Pablo (1545) - Fresco, Capilla Paolina">
+                <div class="img-contenedor">
+                  <img src="img/pinturas/conversion_sanpablo.jpg" alt="La Conversión de San Pablo" class="img-fluid" loading="lazy"
+      decoding="async">
+                </div>
+              </a>
+              <div class="tarjeta-cuerpo">
+                <h3>Conversión de San Pablo</h3>
+                <p class="obra-tecnica">1542–1545 • Fresco</p>
+                <p>Fresco encargado por el Papa Paulo III para su capilla privada en el Vaticano.</p>
+              </div>
             </div>
-          </a>
-          <div class="tarjeta-cuerpo">
-            <h3>Conversión de San Pablo</h3>
-            <p class="obra-tecnica">1542–1545 • Fresco</p>
-            <p>Fresco encargado por el Papa Paulo III para su capilla privada en el Vaticano.</p>
           </div>
-        </div>
-      </div>
 
-      <!-- Obra 6 -->
-      <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="tabla">
-        <div class="tarjeta-renacimiento">
-          <a href="img/madonna.jpeg" data-fancybox="galeria" data-caption="La Madonna de Mánchester (1497) - Temple sobre madera, National Gallery">
-            <div class="img-contenedor">
-              <img src="img/madonna.jpeg" alt="La Madonna de Mánchester" class="img-fluid" loading="lazy"
-  decoding="async">
+          <!-- Obra 6 -->
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="tabla">
+            <div class="tarjeta-renacimiento">
+              <a href="img/pinturas/madonna.jpeg" data-fancybox="galeria" data-caption="La Madonna de Mánchester (1497) - Temple sobre madera, National Gallery">
+                <div class="img-contenedor">
+                  <img src="img/pinturas/madonna.jpeg" alt="La Madonna de Mánchester" class="img-fluid" loading="lazy"
+      decoding="async">
+                </div>
+              </a>
+              <div class="tarjeta-cuerpo">
+                <h3>Madonna de Mánchester</h3>
+                <p class="obra-tecnica">c. 1497 • Tabla inconclusa</p>
+                <p>Pieza de juventud atribuida al artista que permite apreciar su técnica de dibujo preliminar.</p>
+              </div>
             </div>
-          </a>
-          <div class="tarjeta-cuerpo">
-            <h3>Madonna de Mánchester</h3>
-            <p class="obra-tecnica">c. 1497 • Tabla inconclusa</p>
-            <p>Pieza de juventud atribuida al artista que permite apreciar su técnica de dibujo preliminar.</p>
           </div>
-        </div>
-      </div>
 
-    </div>
+        </div>
+      </div>  
   </main>
 
   <!-- Footer estilo clásico -->
@@ -191,6 +213,8 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/histropediajs@1.7.0"></script>
+  <script src="js/linea-tiempo-pinturas.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

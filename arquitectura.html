@@ -76,15 +76,65 @@
                 la gran cúpula.
             </p>
         </section>
-        <div class="contenedor-linea-tiempo">
-          <h2 class="titulo-renacimiento">Línea del tiempo de la arquitectura</h2>
-          <p>
-            Explorá algunos de los principales proyectos arquitectónicos de Miguel Ángel.
-            Podés desplazarte por la línea, hacerle zoom para poder visualizar las obras mejor y también ampliarlas.
-          </p>
-
-          <div id="lineaTiempoArquitectura" class="lineaTiempo"></div>
+        <div class="selector-vista">
+          <button type="button" id="botonLineaTiempo" class="btn-renacimiento">Línea del tiempo</button>
+          <button type="button" id="botonGaleria" class="btn-renacimiento">Galería</button>
         </div>
+
+        <div id="vistaLineaTiempo">
+          
+          <!--Línea del tiempo-->
+          <div class="contenedor-linea-tiempo">
+            <h2 class="titulo-renacimiento">Línea del tiempo de la arquitectura</h2>
+            <p>
+              Explorá algunos de los principales proyectos arquitectónicos de Miguel Ángel.
+              Podés desplazarte por la línea, hacerle zoom para poder visualizar las obras mejor y también ampliarlas.
+            </p>
+
+            <div id="lineaTiempoArquitectura" class="lineaTiempo"></div>
+          </div>
+        </div>
+        
+        <div id="vistaGaleria" hidden>
+        
+        <div class="row mb-4"><div class="col text-center"><div class="btn-group flex-wrap gap-2" role="group" aria-label="Filtrar arquitectura">
+          <button type="button" class="btn btn-renacimiento active filter-btn" data-filter="all" aria-pressed="true">Todas</button>
+          <button type="button" class="btn btn-renacimiento filter-btn" data-filter="florencia" aria-pressed="false">Florencia</button>
+          <button type="button" class="btn btn-renacimiento filter-btn" data-filter="roma" aria-pressed="false">Roma</button>
+        </div></div></div>        <div class="row g-4" id="galeriaObras">
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="florencia"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/fachada-san-lorenzo.jpg" data-fancybox="galeria" data-caption="Fachada de San Lorenzo, encargo de 1516; proyecto no construido."><div class="img-contenedor"><img src="img/arquitectura/fachada-san-lorenzo.jpg" alt="Modelo de la fachada de San Lorenzo" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>Fachada de San Lorenzo</h3><p class="obra-tecnica">Encargo de 1516 · Proyecto no realizado</p><p>Miguel Ángel diseñó una fachada monumental para la iglesia florentina de los Médici, pero la obra fue abandonada.</p></div>
+          </div></div>
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="florencia"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/sacristia-nueva.jpg" data-fancybox="galeria" data-caption="Sacristía Nueva de San Lorenzo, iniciada en 1520."><div class="img-contenedor"><img src="img/arquitectura/sacristia-nueva.jpg" alt="Sacristía Nueva de San Lorenzo" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>Sacristía Nueva</h3><p class="obra-tecnica">Desde 1520 · Florencia</p><p>Capilla funeraria de los Médici en la iglesia de San Lorenzo, donde arquitectura y escultura forman un conjunto.</p></div>
+          </div></div>
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="florencia"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/biblioteca-laurenziana.jpg" data-fancybox="galeria" data-caption="Biblioteca Laurenziana, encargada en 1524; la escalera fue completada por Ammannati."><div class="img-contenedor"><img src="img/arquitectura/biblioteca-laurenziana.jpg" alt="Vestíbulo y escalera de la Biblioteca Laurenziana" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>Biblioteca Laurenziana</h3><p class="obra-tecnica">Desde 1524 · Florencia</p><p>El vestíbulo y su escalera destacan por sus formas dinámicas. Ammannati completó la escalera siguiendo los planos de Miguel Ángel.</p></div>
+          </div></div>
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="roma"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/campidoglio.jpg" data-fancybox="galeria" data-caption="Reordenación de la plaza del Campidoglio, encargada en 1546."><div class="img-contenedor"><img src="img/arquitectura/campidoglio.jpg" alt="Plaza del Campidoglio en Roma" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>Plaza del Campidoglio</h3><p class="obra-tecnica">Desde 1546 · Roma</p><p>Reorganizó la plaza con una composición trapezoidal y un diseño ovalado para el pavimento. El conjunto se completó después de su muerte.</p></div>
+          </div></div>
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="roma"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/palazzo-farnese.jpg" data-fancybox="galeria" data-caption="Palazzo Farnese, obras asumidas por Miguel Ángel desde 1546."><div class="img-contenedor"><img src="img/arquitectura/palazzo-farnese.jpg" alt="Fachada del Palazzo Farnese en Roma" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>Palazzo Farnese</h3><p class="obra-tecnica">Desde 1546 · Roma</p><p>Se hizo cargo de las obras del palacio y diseñó, entre otros elementos, su gran cornisa y el escudo central.</p></div>
+          </div></div>
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="roma"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/basilica-san-pedro.jpg" data-fancybox="galeria" data-caption="Basílica de San Pedro, Miguel Ángel dirigió las obras desde 1546 hasta 1564."><div class="img-contenedor"><img src="img/arquitectura/basilica-san-pedro.jpg" alt="Cúpula de la Basílica de San Pedro" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>Basílica de San Pedro</h3><p class="obra-tecnica">Desde 1546 · Vaticano</p><p>Revisó el proyecto para reforzar la estructura y diseñó la cúpula, construida después de su muerte.</p></div>
+          </div></div>
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="roma"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/san-giovanni-fiorentini.jpg" data-fancybox="galeria" data-caption="Proyecto para San Giovanni dei Fiorentini (1559), no construido."><div class="img-contenedor"><img src="img/arquitectura/san-giovanni-fiorentini.jpg" alt="Proyecto arquitectónico de San Giovanni dei Fiorentini" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>San Giovanni dei Fiorentini</h3><p class="obra-tecnica">Proyecto de 1559 · No construido</p><p>Diseñó una planta compleja con espacios ovalados y rectangulares, pero su propuesta no llegó a realizarse.</p></div>
+          </div></div>
+          <div class="col-12 col-md-6 col-lg-4 obra-card" data-category="roma"><div class="tarjeta-renacimiento">
+            <a href="img/arquitectura/santa-maria-angeli.jpg" data-fancybox="galeria" data-caption="Santa Maria degli Angeli, proyecto de transformación iniciado en 1563."><div class="img-contenedor"><img src="img/arquitectura/santa-maria-angeli.jpg" alt="Interior de Santa Maria degli Angeli en Roma" class="img-fluid" loading="lazy"></div></a>
+            <div class="tarjeta-cuerpo"><h3>Santa Maria degli Angeli</h3><p class="obra-tecnica">Desde 1563 · Roma</p><p>Adaptó parte de las antiguas termas de Diocleciano para crear una iglesia que aprovechara sus grandes espacios.</p></div>
+          </div></div>
+        </div></div>
     </main>
     <footer class="bg-bordo text-crema text-center py-4 border-top-dorado">
     <p class="m-0">Informática General 2026 — Cátedra Drelichman, Paleo, Nadel, Morales</p>
