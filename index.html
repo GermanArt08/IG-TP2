@@ -22,7 +22,7 @@
 <body class="renacimiento-bg">
 
     <!--Menú de navegación-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-bordo border-bottom-dorado">
+    <nav class="navbar navbar-expand-md navbar-dark bg-bordo border-bottom-dorado">
     <div class="container-fluid">
       <a class="navbar-brand marca-renacimiento" href="index.html">Miguel Ángel</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -56,40 +56,62 @@
     </div>
   </nav> 
 
-  <header class="container text-center py-5">
+  <header class="container text-center py-3">
     <h1 class="titulo-renacimiento">Inicio </h1>
     <p class="subtitulo-renacimiento"></p>
     <div class="divisor-dorado mx-auto"></div>
   </header>
 
   <main class="container mb-5">
-            <section class="introduccion">
+            <section class="subtitulo-renacimiento">
             <p>
                 Escultor, pintor, arquitecto y poeta florentino, <span>Miguel Ángel Buonarroti</span> (1475–1564) fue una de las figuras centrales del
                 Renacimiento. Su obra abarcó distintos lenguajes artísticos y
                 recibió encargos de familias poderosas y de varios papas.
             </p></section>
 
-        <section class="contexto">
             <h2>Una época de cambios</h2>
-            <p>
-                <span>Miguel Ángel</span> vivió en un período de grandes transformaciones.
-                En 1492 se produjo el viaje de Colón a América y, en 1517, Martín
-                Lutero inició la Reforma protestante. A la vez, las ideas de
-                Copérnico sobre el sistema heliocéntrico cambiaban la forma de
-                entender el universo. El crecimiento del comercio, la burguesía
-                y el pensamiento científico también impulsó una nueva valoración
-                del individuo y de la figura del artista.
-            </p>
-            <p>
-                Florencia, su ciudad de formación, estuvo marcada por la disputa
-                entre los Médicis y quienes defendían la República. Esos cambios
-                políticos y religiosos ocurrieron mientras Miguel Ángel trabajaba
-                en Florencia y Roma. En sus obras aparecen tanto la influencia de
-                la Antigüedad clásica como la tensión y las preocupaciones de su
-                tiempo.
-            </p>
-        </section>
+            <div class="container">
+              <div class="card mb-3 border-0">
+                <div class="row g-0">
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title color-bordo">¿Qué sucedía?</h3>
+                      <p class="card-text"><span>Miguel Ángel</span> vivió en un período de grandes transformaciones.
+                      En 1492 se produjo el viaje de Colón a América y, en 1517, Martín
+                      Lutero inició la Reforma protestante. A la vez, las ideas de
+                      Copérnico sobre el sistema heliocéntrico cambiaban la forma de
+                      entender el universo. El crecimiento del comercio, la burguesía
+                      y el pensamiento científico también impulsó una nueva valoración
+                      del individuo y de la figura del artista.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 card-img-container">
+                    <img src="img/plaza_de_florencia.jpg" class="img-fluid rounded-end" alt="Piazza del Duomo en Florencia, Italia">
+                  </div>
+                </div>
+              </div>
+
+            <div class="card mb-3 border-0">
+              <div class="row g-0">
+                <div class="col-md-4 card-img-container">
+                  <img src="img/miguel_angel.jpg" class="img-fluid rounded-start" alt="Retrato de Miguel Ángel pintado por Daniele da Volterra">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h3 class="card-title">Su trayectoria</h3>
+                    <p class="card-text">Florencia, su ciudad de formación, estuvo marcada por la disputa
+                    entre los Médicis y quienes defendían la República. Esos cambios
+                    políticos y religiosos ocurrieron mientras Miguel Ángel trabajaba
+                    en Florencia y Roma. En sus obras aparecen tanto la influencia de
+                    la Antigüedad clásica como la tensión y las preocupaciones de su
+                    tiempo.</p>
+                    <a href="trayectoria.html" class="btn-renacimiento text-decoration-none">Conoce más sobre él</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
 
         <p class="texto-destacado">
             En este sitio se puede recorrer su trayectoria, conocer sus
@@ -104,6 +126,5 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
